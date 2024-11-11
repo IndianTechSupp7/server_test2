@@ -6,6 +6,10 @@ import 'package:server_test2/pages/login_page.dart';
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
 
+  static void logout() async {
+    await FirebaseAuth.instance.signOut();
+  } 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
